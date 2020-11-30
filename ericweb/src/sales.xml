@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<!-- 客戶資料查詢 -->
+	<package name="customers" extends="struts-default" namespace="/customers">
+		<!-- 調用客戶查詢表單頁面 -->
+		<action name="custqry" class="com.gjun.controller.CustomersController" method="countryQry">
+			<result name="success">/WEB-INF/customers/customersform.jsp</result>
+			<result name="ok">/WEB-INF/customers/customersform.jsp</result>
+		</action>
+		<action name="customermaint" class="com.gjun.controller.CustomersController">
+			<result name="success" type="dispatcher">/WEB-INF/customers/customersadd.jsp</result>			
+		</action>
+	</package>
+</struts>
